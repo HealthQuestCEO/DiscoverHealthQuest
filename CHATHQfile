@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>✨ Choose Your Kindness Quest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #dff8f4;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #007B7F;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 12px;
+      padding: 14px 24px;
+      font-size: 1em;
+      color: white;
+      background-color: #66bfad;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #57a695;
+    }
+    img {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <img src="HealthQuest Hub-2.svg" alt="HealthQuest Logo">
+  <h1>✨ Choose Your Kindness Quest</h1>
+
+  <!-- Button Links to Interactive Lessons -->
+  <a href="TheHallwayMoment_Interactive_Corrected.html" class="btn">🌟 The Hallway Moment</a>
+  <a href="TheJokeThatWentTooFar_Interactive_Corrected.html" class="btn">😔 The Joke That Went Too Far</a>
+  <a href="TheGroupChatDilemma_Interactive.html" class="btn">📱 The Group Chat Dilemma</a>
+  <a href="ThePlaygroundDilemma_Interactive.html" class="btn">🛝 The Playground Dilemma</a>
+  <a href="TheFriendshipFix_Interactive.html" class="btn">🤝 The Friendship Fix</a>
+  <a href="TheBigFeelingsMoment_Interactive.html" class="btn">😡 The Big Feelings Moment</a>
+  <a href="TheJokeThatHurt_Interactive.html" class="btn">😬 The Joke That Hurt</a>
+  <a href="TheLeftOutLunch_Interactive.html" class="btn">🚫 The Left-Out Lunch</a>
+  <a href="JustBreathe_Interactive.html" class="btn">🧠 Just Breathe</a>
+  <a href="WhyDidISayThat_Interactive.html" class="btn">💬 Why Did I Say That?</a>
+  <a href="WhatMakesYouDifferent_Interactive.html" class="btn">🧢 What Makes You Different</a>
+  <a href="TheBullysChange_Interactive.html" class="btn">😐 The Bully's Change</a>
+
+</body>
+</html>
