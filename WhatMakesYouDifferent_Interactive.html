@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🧢 What Makes You Different</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #dff8f4;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    .scene { display: none; max-width: 640px; margin: 0 auto; }
+    .scene.active { display: block; }
+    button {
+      margin: 10px 5px;
+      padding: 12px 20px;
+      background-color: #66bfad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #57a695;
+    }
+    #scene12 {
+      background-color: #fef6e4;
+      border: 2px dashed #66bfad;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    img.logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<img src="HealthQuest Hub-2.svg" alt="HealthQuest Logo" class="logo">
+
+<div id="scene1" class="scene active">
+  <h2>🧢 What Makes You Different</h2>
+  <p>It’s Hat Day at school. You wear a colorful cap your grandma gave you from her home country.</p>
+  <p>In the hallway, someone says, “That hat looks weird!” Others giggle.</p>
+  <p>You feel your face get hot. You love your hat—but now you’re unsure.</p>
+  <p>What do you do?</p>
+  <button onclick="showScene('scene2')">Speak up and say why it’s special</button>
+  <button onclick="showScene('scene3')">Take it off and hide it in your backpack</button>
+  <button onclick="showScene('scene4')">Walk away without saying anything</button>
+</div>
+
+<div id="scene2" class="scene">
+  <p>You say, “It’s from my grandma. It’s part of our culture.”</p>
+  <p>One person says, “Oh,” and another says, “That’s actually pretty cool.”</p>
+  <button onclick="showScene('scene5')">Wear it proudly all day</button>
+  <button onclick="showScene('scene6')">Invite questions at lunch</button>
+</div>
+
+<div id="scene3" class="scene">
+  <p>You quickly take off your hat and shove it in your bag. You feel sad but hope no one says more.</p>
+  <p>Later, your teacher notices and asks, “Didn’t you bring something special?”</p>
+  <button onclick="showScene('scene7')">Show the class and explain</button>
+  <button onclick="showScene('scene8')">Say no and stay quiet</button>
+</div>
+
+<div id="scene4" class="scene">
+  <p>You walk away. No one follows, but your feelings stay with you.</p>
+  <p>In class, a friend says, “Hey, I liked your hat.”</p>
+  <button onclick="showScene('scene5')">Put it back on</button>
+  <button onclick="showScene('scene9')">Say thanks but leave it off</button>
+</div>
+
+<div id="scene5" class="scene">
+  <p>You wear your hat proudly. You start to notice others smiling at it, not laughing.</p>
+  <p>You feel proud for being brave.</p>
+  <button onclick="showScene('scene12')">Celebrate your difference</button>
+  <button onclick="showScene('scene11')">Tell your grandma about your day</button>
+</div>
+
+<div id="scene6" class="scene">
+  <p>At lunch, someone asks, “Where’s your hat from again?”</p>
+  <p>You explain the colors and the story behind it. A few kids say, “That’s awesome!”</p>
+  <button onclick="showScene('scene12')">Smile and feel seen</button>
+  <button onclick="showScene('scene11')">Keep sharing your culture</button>
+</div>
+
+<div id="scene7" class="scene">
+  <p>You stand up and say, “This hat is from my grandma in [your culture].”</p>
+  <p>The class listens. The teacher claps. You sit down with a smile.</p>
+  <button onclick="showScene('scene12')">Wear it again tomorrow</button>
+  <button onclick="showScene('scene11')">Keep it safe but special</button>
+</div>
+
+<div id="scene8" class="scene">
+  <h3>Reflection</h3>
+  <p>You stayed quiet, but deep down you wish you had spoken up. Your story matters.</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene13')">Go to an ending</button>
+</div>
+
+<div id="scene9" class="scene">
+  <h3>Reflection</h3>
+  <p>Even though you didn’t put it back on, you felt seen by a kind word. Next time, you might feel stronger.</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene13')">Go to an ending</button>
+</div>
+
+<div id="scene11" class="scene">
+  <h3>Reflection</h3>
+  <p>You took pride in something special to you. That’s how we help others be brave, too.</p>
+  <button onclick="showScene('scene1')">Restart</button>
+  <button onclick="showScene('scene14')">Go to an ending</button>
+</div>
+
+<div id="scene12" class="scene">
+  <h3>✨ You Are a Kindness Hero! ✨</h3>
+  <p>You stayed true to yourself and taught others something new. That’s kindness in action.</p>
+  <p>🏅 <em>You’ve earned the Kindness Hero badge!</em></p>
+  <button onclick="showScene('scene1')">Try a new path</button>
+</div>
+
+<div id="scene13" class="scene">
+  <h3>Ending</h3>
+  <p>You didn’t speak up this time. But now you know—being different is something to celebrate.</p>
+</div>
+
+<div id="scene14" class="scene">
+  <h3>Ending</h3>
+  <p>You embraced what made you unique—and others followed your lead. That’s how change starts.</p>
+</div>
+
+<script>
+function showScene(sceneId) {
+  document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+  document.getElementById(sceneId).classList.add('active');
+}
+</script>
+
+</body>
+</html>

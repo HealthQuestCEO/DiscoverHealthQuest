@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🛝 The Playground Dilemma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #dff8f4;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    .scene { display: none; max-width: 640px; margin: 0 auto; }
+    .scene.active { display: block; }
+    button {
+      margin: 10px 5px;
+      padding: 12px 20px;
+      background-color: #66bfad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover { background-color: #57a695; }
+    #scene12 {
+      background-color: #fef6e4;
+      border: 2px dashed #66bfad;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    img.logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<img src="HealthQuest Hub-2.svg" alt="HealthQuest Logo" class="logo">
+
+<div id="scene1" class="scene active">
+  <h2>🛝 The Playground Dilemma</h2>
+  <p>It’s recess. You see a group of kids playing tag. Zoe walks over and asks to join. One kid says, “No, we already started.”</p>
+  <p>Zoe looks hurt and turns away.</p>
+  <p>What do you do?</p>
+  <button onclick="showScene('scene2')">Invite Zoe to play something else</button>
+  <button onclick="showScene('scene3')">Ask the group why she can’t join</button>
+  <button onclick="showScene('scene4')">Say nothing and keep playing</button>
+</div>
+
+<div id="scene2" class="scene">
+  <p>You run up to Zoe and say, “Want to play on the swings with me?”</p>
+  <p>She smiles and nods. “Thanks,” she says. You both walk away from the tag game.</p>
+  <button onclick="showScene('scene5')">Talk about how it felt</button>
+  <button onclick="showScene('scene11')">Play together quietly</button>
+</div>
+
+<div id="scene3" class="scene">
+  <p>You ask, “Why can’t Zoe play too?”</p>
+  <p>One kid shrugs, “We already started.”</p>
+  <p>You notice others in the group looking unsure now.</p>
+  <button onclick="showScene('scene6')">Say “We can restart and let her join”</button>
+  <button onclick="showScene('scene7')">Let it go and keep playing</button>
+</div>
+
+<div id="scene4" class="scene">
+  <p>You say nothing. Zoe walks away. You keep playing, but something feels off.</p>
+  <button onclick="showScene('scene8')">Catch up with Zoe later</button>
+  <button onclick="showScene('scene9')">Stay with your group</button>
+</div>
+
+<div id="scene5" class="scene">
+  <p>You and Zoe sit on the swings. “It felt pretty bad when they said no,” she says.</p>
+  <p>You nod. “They should’ve let you play.”</p>
+  <button onclick="showScene('scene12')">Promise to stand up next time</button>
+  <button onclick="showScene('scene11')">Just listen and be there</button>
+</div>
+
+<div id="scene6" class="scene">
+  <p>You say, “Let’s restart and include Zoe.”</p>
+  <p>After a moment, someone agrees. “Okay,” they say. Zoe joins in, smiling.</p>
+  <button onclick="showScene('scene12')">Cheer her on</button>
+  <button onclick="showScene('scene11')">Play quietly and smile</button>
+</div>
+
+<div id="scene7" class="scene">
+  <p>You keep playing, but things don’t feel as fun anymore.</p>
+  <p>Later, someone says, “Maybe we should’ve let her play.”</p>
+  <button onclick="showScene('scene8')">Find Zoe and say sorry</button>
+  <button onclick="showScene('scene10')">Just move on</button>
+</div>
+
+<div id="scene8" class="scene">
+  <p>You find Zoe near the fence. “Hey, I’m sorry about earlier. That wasn’t right.”</p>
+  <p>She smiles a little. “Thanks. That means a lot.”</p>
+  <button onclick="showScene('scene12')">Ask her to play now</button>
+  <button onclick="showScene('scene11')">Walk with her to class</button>
+</div>
+
+<div id="scene9" class="scene">
+  <h3>Reflection</h3>
+  <p>You didn’t say anything. Zoe felt left out. You wonder if speaking up might have helped.</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene13')">Go to an ending</button>
+</div>
+
+<div id="scene10" class="scene">
+  <h3>Reflection</h3>
+  <p>You didn’t say anything. Next time, maybe you’ll notice who’s being left out.</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene13')">Go to an ending</button>
+</div>
+
+<div id="scene11" class="scene">
+  <h3>Reflection</h3>
+  <p>You showed kindness by being there for someone who felt excluded. Even small actions can help.</p>
+  <button onclick="showScene('scene1')">Restart</button>
+  <button onclick="showScene('scene14')">Go to an ending</button>
+</div>
+
+<div id="scene12" class="scene">
+  <h3>✨ You Are a Kindness Hero! ✨</h3>
+  <p>You noticed someone being left out—and you did something about it.</p>
+  <p>🏅 <em>You’ve earned the Kindness Hero badge!</em></p>
+  <button onclick="showScene('scene1')">Try a new path</button>
+</div>
+
+<div id="scene13" class="scene">
+  <h3>Ending</h3>
+  <p>You chose to stay quiet this time. But now you know—being kind can change someone’s whole day.</p>
+</div>
+
+<div id="scene14" class="scene">
+  <h3>Ending</h3>
+  <p>You helped Zoe feel included. It might’ve seemed small, but it made a big difference.</p>
+</div>
+
+<script>
+function showScene(sceneId) {
+  document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+  document.getElementById(sceneId).classList.add('active');
+}
+</script>
+
+</body>
+</html>

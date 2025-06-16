@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>😔 The Joke That Went Too Far</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #dff8f4;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    .scene { display: none; max-width: 640px; margin: 0 auto; }
+    .scene.active { display: block; }
+    button {
+      margin: 10px 5px;
+      padding: 12px 20px;
+      background-color: #66bfad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #57a695;
+    }
+    #scene12 {
+      background-color: #fef6e4;
+      border: 2px dashed #66bfad;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    img.logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<img src="HealthQuest Hub-2.svg" alt="HealthQuest Logo" class="logo">
+
+<div id="scene1" class="scene active">
+  <h2>😔 The Joke That Went Too Far</h2>
+  <p>You’re Jayden. You like making your friends laugh. At lunch, you make a joke about Noah’s shoes. Everyone laughs—even Noah smiles a little.</p>
+  <p>But later, you see Noah sitting alone, looking sad.</p>
+  <p>What do you do?</p>
+  <button onclick="showScene('scene2')">Go over and ask if he’s okay</button>
+  <button onclick="showScene('scene3')">Ignore it—he probably knows it was a joke</button>
+  <button onclick="showScene('scene4')">Tell your friends another joke about Noah</button>
+</div>
+
+<div id="scene2" class="scene">
+  <p>You walk over and ask, “Hey, are you okay?” Noah shrugs. “It’s fine,” he says. But he doesn’t smile.</p>
+  <button onclick="showScene('scene5')">Say sorry for the joke</button>
+  <button onclick="showScene('scene6')">Sit with him for a while</button>
+</div>
+
+<div id="scene3" class="scene">
+  <p>You walk past. Maybe he’s just having a bad day. But something about his face makes you pause.</p>
+  <button onclick="showScene('scene2')">Go back and check on him</button>
+  <button onclick="showScene('scene10')">Keep going and forget about it</button>
+</div>
+
+<div id="scene4" class="scene">
+  <p>You make another joke about Noah. The group laughs, but this time, someone says, “That’s kinda mean, Jayden.”</p>
+  <p>You feel your face get hot.</p>
+  <button onclick="showScene('scene7')">Laugh it off and keep joking</button>
+  <button onclick="showScene('scene8')">Say you didn’t mean to be mean</button>
+</div>
+
+<div id="scene5" class="scene">
+  <p>You say, “I’m sorry. I didn’t mean to hurt your feelings.” Noah looks surprised. “Thanks,” he says.</p>
+  <button onclick="showScene('scene12')">Invite him to play at recess</button>
+  <button onclick="showScene('scene11')">Smile and leave him alone for now</button>
+</div>
+
+<div id="scene6" class="scene">
+  <p>You sit down next to Noah and just hang out for a bit. You don’t talk much, but he seems a little happier.</p>
+  <button onclick="showScene('scene12')">Ask him to hang out later</button>
+  <button onclick="showScene('scene11')">Head back to your friends</button>
+</div>
+
+<div id="scene7" class="scene">
+  <p>You keep joking. Everyone laughs—except one friend, who walks away. You wonder if you went too far.</p>
+  <button onclick="showScene('scene10')">Ignore it</button>
+  <button onclick="showScene('scene9')">Think about how it made Noah feel</button>
+</div>
+
+<div id="scene8" class="scene">
+  <p>You say, “I didn’t mean to be mean.” Your friend nods. “Just think about it.” You feel unsure—but maybe you can fix this.</p>
+  <button onclick="showScene('scene2')">Go talk to Noah</button>
+  <button onclick="showScene('scene9')">Think about what to do better next time</button>
+</div>
+
+<div id="scene9" class="scene">
+  <h3>Reflection</h3>
+  <p>Sometimes we joke without meaning to hurt someone. But if someone feels hurt, we can choose to make things better.</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene13')">Go to an ending</button>
+</div>
+
+<div id="scene10" class="scene">
+  <h3>Reflection</h3>
+  <p>You didn’t talk to Noah. Maybe he’s okay… or maybe he’s not. Next time, you could check in. You never know how much it might help.</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene14')">Go to an ending</button>
+</div>
+
+<div id="scene11" class="scene">
+  <h3>Reflection</h3>
+  <p>You made a kind choice. Even small things—like sitting near someone—can help.</p>
+  <button onclick="showScene('scene1')">Restart the story</button>
+  <button onclick="showScene('scene15')">Go to an ending</button>
+</div>
+
+<div id="scene12" class="scene">
+  <h3>✨ You Are a Kindness Hero! ✨</h3>
+  <p>You made someone feel included and seen. That takes courage and heart.</p>
+  <p>🏅 <em>You’ve earned the Kindness Hero badge!</em></p>
+  <button onclick="showScene('scene1')">Try a new path</button>
+</div>
+
+<div id="scene13" class="scene">
+  <h3>Ending</h3>
+  <p>Today, you learned how your words can make a difference. Tomorrow, you’ll use them to lift others up.</p>
+</div>
+
+<div id="scene14" class="scene">
+  <h3>Ending</h3>
+  <p>You chose not to act. But now you know—kindness can be just one question away.</p>
+</div>
+
+<div id="scene15" class="scene">
+  <h3>Ending</h3>
+  <p>You showed quiet strength. Being a friend matters—and Noah will remember that.</p>
+</div>
+
+<script>
+function showScene(sceneId) {
+  document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+  document.getElementById(sceneId).classList.add('active');
+}
+</script>
+
+</body>
+</html>

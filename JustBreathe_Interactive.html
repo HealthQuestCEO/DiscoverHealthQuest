@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Just Breathe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #dff8f4;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    .scene { display: none; max-width: 640px; margin: 0 auto; }
+    .scene.active { display: block; }
+    button {
+      margin: 10px 5px;
+      padding: 12px 20px;
+      background-color: #66bfad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #57a695;
+    }
+    #scene12 {
+      background-color: #fef6e4;
+      border: 2px dashed #66bfad;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    img.logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<img src="HealthQuest Hub-2.svg" alt="HealthQuest Logo" class="logo">
+
+<div id="scene1" class="scene active">
+  <h2>🧠 Just Breathe</h2>
+  <p>You’re about to present in front of the class. Your stomach feels tight, and your heart is racing.</p>
+  <p>Your name is called. Everyone turns to look at you.</p>
+  <p>What do you do?</p>
+  <button onclick="showScene('scene2')">Take deep breaths before standing</button>
+  <button onclick="showScene('scene3')">Rush up and hope it goes fast</button>
+  <button onclick="showScene('scene4')">Tell the teacher you’re not ready</button>
+</div>
+
+<div id="scene2" class="scene">
+  <p>You pause. You breathe in slowly and out again. Then you do it again.</p>
+  <p>Your body feels a little calmer now. You walk to the front more slowly.</p>
+  <button onclick="showScene('scene5')">Begin your presentation</button>
+  <button onclick="showScene('scene6')">Make eye contact with a friend</button>
+</div>
+
+<div id="scene3" class="scene">
+  <p>You rush to the front and start reading your paper quickly. Your voice shakes a little.</p>
+  <p>You feel nervous the whole time but get through it.</p>
+  <button onclick="showScene('scene7')">Reflect on what worked</button>
+  <button onclick="showScene('scene8')">Ask to try again later</button>
+</div>
+
+<div id="scene4" class="scene">
+  <p>You whisper, “I’m not ready.” The teacher nods and says, “It’s okay. Take a moment.”</p>
+  <p>You sit back down and breathe slowly.</p>
+  <button onclick="showScene('scene2')">Try again with breathing</button>
+  <button onclick="showScene('scene9')">Write your teacher a note later</button>
+</div>
+
+<div id="scene5" class="scene">
+  <p>You start speaking. Your voice is steady. You remember to breathe as you talk.</p>
+  <p>By the end, your classmates clap. You smile, proud of yourself.</p>
+  <button onclick="showScene('scene12')">Take a bow</button>
+  <button onclick="showScene('scene11')">Thank your teacher</button>
+</div>
+
+<div id="scene6" class="scene">
+  <p>You spot your friend and they give you a thumbs up. You feel more confident and begin.</p>
+  <button onclick="showScene('scene12')">Smile and start</button>
+  <button onclick="showScene('scene11')">Take your time</button>
+</div>
+
+<div id="scene7" class="scene">
+  <h3>Reflection</h3>
+  <p>You made it through. It was hard, but you did it. What might help you feel more calm next time?</p>
+  <button onclick="showScene('scene1')">Try again</button>
+  <button onclick="showScene('scene13')">Go to an ending</button>
+</div>
+
+<div id="scene8" class="scene">
+  <p>You ask, “Can I try again?” The teacher nods. You practice breathing and get ready.</p>
+  <button onclick="showScene('scene2')">Prepare and try again</button>
+  <button onclick="showScene('scene11')">Wait until tomorrow</button>
+</div>
+
+<div id="scene9" class="scene">
+  <h3>Reflection</h3>
+  <p>Taking a break is okay. You listened to your body and found a calmer way to share your voice.</p>
+  <button onclick="showScene('scene1')">Restart</button>
+  <button onclick="showScene('scene14')">Go to an ending</button>
+</div>
+
+<div id="scene11" class="scene">
+  <h3>Reflection</h3>
+  <p>You didn’t rush. You paused. That gave your body and mind a chance to work together.</p>
+  <button onclick="showScene('scene1')">Restart</button>
+  <button onclick="showScene('scene14')">Go to an ending</button>
+</div>
+
+<div id="scene12" class="scene">
+  <h3>✨ You Are a Kindness Hero! ✨</h3>
+  <p>You showed kindness to yourself—by breathing, pausing, and being brave. That’s true strength.</p>
+  <p>🏅 <em>You’ve earned the Kindness Hero badge!</em></p>
+  <button onclick="showScene('scene1')">Try a new path</button>
+</div>
+
+<div id="scene13" class="scene">
+  <h3>Ending</h3>
+  <p>You did your best under pressure. Each time you face fear, you grow stronger.</p>
+</div>
+
+<div id="scene14" class="scene">
+  <h3>Ending</h3>
+  <p>You found calm inside yourself. That’s a skill you can use anytime, anywhere.</p>
+</div>
+
+<script>
+function showScene(sceneId) {
+  document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+  document.getElementById(sceneId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
